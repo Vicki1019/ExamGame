@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Fragment;
 import android.app.Notification;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -80,7 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
                             boolean emailVerified = user.isEmailVerified();
                             if (emailVerified) {
-                                Toast.makeText(MainActivity.this, "登入成功, uid=" + uid , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "登入成功" , Toast.LENGTH_SHORT).show();
+                                Intent it = new Intent(MainActivity.this, ChoosePage.class);
+                                startActivity(it);
+                                finish();
                             }
                             else{
                                 Toast.makeText(MainActivity.this, "您的電子郵件信箱尚未通過認證" , Toast.LENGTH_SHORT).show();

@@ -25,7 +25,7 @@
         android:ems="10"
         android:hint="請輸入email帳號"
         android:inputType="textPersonName"
-        android:text=""
+        android:text="s1071930@gm.pu.edu.tw"
         app:layout_constraintBottom_toTopOf="@+id/edtPwd"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
 
@@ -36,7 +36,7 @@
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text=""
+        android:text="123456"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
 
