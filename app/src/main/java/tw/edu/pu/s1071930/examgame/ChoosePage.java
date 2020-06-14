@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class ChoosePage extends AppCompatActivity {
@@ -40,11 +41,11 @@ public class ChoosePage extends AppCompatActivity {
                 finish();
             }
         });
-        ImageButton checkhbtn = (ImageButton) findViewById(R.id.checkhbtn);
+        Button checkhbtn = (Button) findViewById(R.id.checkhbtn);
         checkhbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(ChoosePage.this, ColorGame.class);
+                Intent it = new Intent(ChoosePage.this, CheckPage.class);
                 startActivity(it);
                 finish();
             }
