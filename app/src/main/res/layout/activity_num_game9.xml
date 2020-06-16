@@ -62,7 +62,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/design_default_color_error"
-        android:text="結束練習"
+        android:text="結束練習" 
         android:textColor="#FDFCFC"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
