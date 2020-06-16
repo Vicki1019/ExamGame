@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NumGame">
-
+    tools:context=".NumGame5">
     <ImageView
         android:id="@+id/gamebg"
         android:layout_width="wrap_content"
@@ -25,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/zero" />
+        app:srcCompat="@drawable/five" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -69,6 +68,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="上一個"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/last" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="253dp"
@@ -76,5 +88,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/w0" />
+        app:srcCompat="@drawable/w5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

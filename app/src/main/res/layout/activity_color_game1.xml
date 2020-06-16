@@ -4,56 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NumGame">
+    tools:context=".ColorGame1">
 
     <ImageView
-        android:id="@+id/gamebg"
+        android:id="@+id/gamebg2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/gamepage" />
 
     <ImageView
-        android:id="@+id/zero"
-        android:layout_width="293dp"
-        android:layout_height="301dp"
+        android:id="@+id/cred"
+        android:layout_width="268dp"
+        android:layout_height="275dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/zero" />
+        app:srcCompat="@drawable/photo_orange" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
+        android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.53" />
-
-    <Button
-        android:id="@+id/last"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="下一個"
-        android:textColor="#FFFFFF"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/end" />
 
     <Button
         android:id="@+id/end"
@@ -69,12 +56,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/last"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="下一個"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/end" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="253dp"
         android:layout_height="255dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintBottom_toTopOf="@+id/last"
+        app:layout_constraintEnd_toEndOf="@+id/gamebg2"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/w0" />
+        app:srcCompat="@drawable/worg" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="上一個"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/last" />
 </androidx.constraintlayout.widget.ConstraintLayout>

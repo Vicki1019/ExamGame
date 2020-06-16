@@ -8,12 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class NumGame extends AppCompatActivity {
+public class ColorGame8 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_num_game);
+        setContentView(R.layout.activity_color_game8);
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -26,20 +26,19 @@ public class NumGame extends AppCompatActivity {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(NumGame.this, CheckPage.class);
+                Intent it = new Intent(ColorGame8.this, CheckPage.class);
                 startActivity(it);
                 finish();
             }
         });
-        Button next = (Button) findViewById(R.id.last);
-        next.setOnClickListener(new View.OnClickListener() {
+        Button last = (Button) findViewById(R.id.last);
+        last.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(NumGame.this, NumGame1.class);
+                Intent it = new Intent(ColorGame8.this, ColorGame7.class);
                 startActivity(it);
                 finish();
             }
         });
     }
-
 }

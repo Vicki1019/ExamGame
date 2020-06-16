@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class ColorGame extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +30,16 @@ public class ColorGame extends AppCompatActivity {
                 finish();
             }
         });
+        Button next = (Button) findViewById(R.id.last);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(ColorGame.this, ColorGame1.class);
+                startActivity(it);
+                finish();
+            }
+        });
     }
 
-    public void NextColor(View view) {
-    }
+
 }
