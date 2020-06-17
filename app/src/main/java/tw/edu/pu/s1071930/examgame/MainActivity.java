@@ -3,8 +3,7 @@ package tw.edu.pu.s1071930.examgame;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Fragment;
-import android.app.Notification;
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     FirebaseUser user;
 
-    EditText edtMail, edtPwd, edtMsg;
+    EditText edtMail, edtPwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -9,26 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ColorGame1"></activity>
-        <activity android:name=".ColorGame8" />
+        <activity android:name=".ColorGame8"></activity>
         <activity android:name=".ColorGame7" />
         <activity android:name=".ColorGame6" />
         <activity android:name=".ColorGame5" />
         <activity android:name=".ColorGame4" />
         <activity android:name=".ColorGame3" />
         <activity android:name=".ColorGame2" />
-        <activity
-            android:name=".ui.login.ColorGame1"
-            android:label="@string/title_activity_color_game1" />
         <activity android:name=".NumGame9" />
         <activity android:name=".NumGame8" />
         <activity android:name=".NumGame7" />
         <activity android:name=".NumGame6" />
         <activity android:name=".NumGame5" />
         <activity android:name=".NumGame4" />
+        <activity android:name=".ColorGame1" />
         <activity android:name=".NumGame3" />
         <activity android:name=".NumGame2" />
         <activity android:name=".NumGame1" />
+        <activity
+            android:name=".ui.login.ColorGame1"
+            android:label="@string/title_activity_color_game1" />
         <activity android:name=".CheckPage" />
         <activity android:name=".ColorGame" />
         <activity android:name=".NumGame" />
