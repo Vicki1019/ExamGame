@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ColorTest2">
+    tools:context=".ColorTest1">
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="733dp"
@@ -27,7 +27,7 @@
         android:layout_width="208dp"
         android:layout_height="83dp"
         android:layout_marginBottom="16dp"
-        android:text="咖"
+        android:text="橘"
         android:textSize="50dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/photo_brown" />
+        app:srcCompat="@drawable/photo_green" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"

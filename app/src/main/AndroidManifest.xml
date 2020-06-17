@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChoosePage1"></activity>
+        <activity android:name=".ColorTest1"></activity>
+        <activity android:name=".ColorTest3" />
+        <activity android:name=".ChoosePage1" />
         <activity android:name=".ColorTest2" />
         <activity android:name=".ColorTest" />
         <activity android:name=".ColorGame8" />

@@ -31,22 +31,31 @@ public class ColorTest extends AppCompatActivity implements DialogInterface.OnCl
         ans1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(ColorTest.this, ColorTest2.class);
-                startActivity(it);
-                finish();
                 Toast toast = Toast.makeText(ColorTest.this, "好棒，你答對了！",Toast.LENGTH_SHORT);
                 toast.show();
+                Intent it = new Intent(ColorTest.this, ColorTest1.class);
+                startActivity(it);
+                finish();
             }
         });
-
         Button ans2 = (Button) findViewById(R.id.ans2);
         ans2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast toast = Toast.makeText(ColorTest.this, "差一點就答對了，加油！",Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        Button back = (Button) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 new AlertDialog.Builder(ColorTest.this)
-                        .setMessage("差一點就答對了，加油！")
+                        .setMessage("您確定要結束測驗嗎?")
                         .setIcon(R.drawable.ic_launcher_background)
                         .setPositiveButton("確定", ColorTest.this)
+                        .setNegativeButton("取消",ColorTest.this)
                         .show();
             }
         });
@@ -54,7 +63,7 @@ public class ColorTest extends AppCompatActivity implements DialogInterface.OnCl
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == DialogInterface.BUTTON_POSITIVE) {
-            Intent it = new Intent(ColorTest.this, ColorTest.class);
+            Intent it = new Intent(ColorTest.this, MainActivity.class);
             startActivity(it);
             finish();
         }
