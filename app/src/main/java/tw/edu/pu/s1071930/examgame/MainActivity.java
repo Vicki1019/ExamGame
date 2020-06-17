@@ -1,13 +1,16 @@
 package tw.edu.pu.s1071930.examgame;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,7 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener{
     private FirebaseAuth mAuth;
     FirebaseUser user;
 
@@ -38,8 +41,20 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         edtMail = (EditText) findViewById(R.id.edtMail);
         edtPwd = (EditText) findViewById(R.id.edtPwd);
-        //edtMsg = (EditText) findViewById(R.id.edtMsg);
 
+        Button btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(MainActivity.this)
+                        //.setTitle("")
+                        .setMessage("請選擇您是練習或是測驗")
+                        .setIcon(R.drawable.ic_launcher_background)
+                        .setPositiveButton("測驗", MainActivity.this)
+                        .setNegativeButton("練習",MainActivity.this)
+                        .show();
+            }
+        });
     }
     public void Register(View v){
         String Mail = edtMail.getText().toString();
@@ -84,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
                                 Intent it = new Intent(MainActivity.this, ChoosePage.class);
                                 startActivity(it);
                                 finish();
+                                Button btnLogin = (Button) findViewById(R.id.btnLogin);
+                                btnLogin.performClick();
                             }
                             else{
                                 Toast.makeText(MainActivity.this, "您的電子郵件信箱尚未通過認證" , Toast.LENGTH_SHORT).show();
@@ -97,5 +114,16 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-
+    @Override
+    public void onClick(DialogInterface dialogInterface, int i) {
+        if (i == DialogInterface.BUTTON_POSITIVE) {
+            Intent it = new Intent(MainActivity.this, ChoosePage1.class);
+            startActivity(it);
+            finish();
+        }else{
+            Intent it = new Intent(MainActivity.this, ChoosePage.class);
+            startActivity(it);
+            finish();
+        }
+    }
 }

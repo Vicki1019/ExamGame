@@ -10,12 +10,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
-public class ChoosePage extends AppCompatActivity{
+public class ColorTest extends AppCompatActivity implements DialogInterface.OnClickListener{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_page);
+        setContentView(R.layout.activity_color_test);
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -24,32 +26,37 @@ public class ChoosePage extends AppCompatActivity{
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        ImageButton num = (ImageButton) findViewById(R.id.num);
-        num.setOnClickListener(new View.OnClickListener() {
+
+        Button ans1 = (Button) findViewById(R.id.ans1);
+        ans1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(ChoosePage.this, NumGame.class);
+                Intent it = new Intent(ColorTest.this, ColorTest2.class);
                 startActivity(it);
                 finish();
+                Toast toast = Toast.makeText(ColorTest.this, "好棒，你答對了！",Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
-        ImageButton color = (ImageButton) findViewById(R.id.color);
-        color.setOnClickListener(new View.OnClickListener() {
+
+        Button ans2 = (Button) findViewById(R.id.ans2);
+        ans2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(ChoosePage.this, ColorGame.class);
-                startActivity(it);
-                finish();
+                new AlertDialog.Builder(ColorTest.this)
+                        .setMessage("差一點就答對了，加油！")
+                        .setIcon(R.drawable.ic_launcher_background)
+                        .setPositiveButton("確定", ColorTest.this)
+                        .show();
             }
         });
-        Button checkhbtn = (Button) findViewById(R.id.checkhbtn);
-        checkhbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent it = new Intent(ChoosePage.this, CheckPage.class);
-                startActivity(it);
-                finish();
-            }
-        });
+    }
+    @Override
+    public void onClick(DialogInterface dialogInterface, int i) {
+        if (i == DialogInterface.BUTTON_POSITIVE) {
+            Intent it = new Intent(ColorTest.this, ColorTest.class);
+            startActivity(it);
+            finish();
+        }
     }
 }
