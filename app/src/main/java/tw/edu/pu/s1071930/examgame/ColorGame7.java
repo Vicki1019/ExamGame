@@ -40,7 +40,7 @@ public class ColorGame7 extends AppCompatActivity {
                 finish();
             }
         });
-        Button next = (Button) findViewById(R.id.next);
+        Button next = (Button) findViewById(R.id.btnNext);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

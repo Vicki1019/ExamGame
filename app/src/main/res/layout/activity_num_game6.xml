@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/psix" />
 
     <ImageView
-        android:id="@+id/zero"
+        android:id="@+id/imgNumber"
         android:layout_width="293dp"
         android:layout_height="301dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
@@ -56,17 +56,17 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgWord"
         android:layout_width="253dp"
         android:layout_height="255dp"
-        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/w6" />
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -105,5 +105,5 @@
         android:textColor="#FFFAFA"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next" />
+        app:layout_constraintEnd_toStartOf="@+id/btnNext" />
 </androidx.constraintlayout.widget.ConstraintLayout>

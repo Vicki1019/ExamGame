@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".NumGame">
 
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="上一個"
+        android:textColor="#FFFAFA"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext" />
+
     <ImageView
         android:id="@+id/gamebg"
         android:layout_width="wrap_content"
@@ -17,7 +31,7 @@
         app:srcCompat="@drawable/pzero" />
 
     <ImageView
-        android:id="@+id/zero"
+        android:id="@+id/imgNumber"
         android:layout_width="293dp"
         android:layout_height="301dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
@@ -56,17 +70,17 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgWord"
         android:layout_width="253dp"
         android:layout_height="255dp"
-        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/w0" />
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"

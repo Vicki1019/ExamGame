@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgWord"
         android:layout_width="253dp"
         android:layout_height="255dp"
         app:layout_constraintBottom_toTopOf="@+id/last"

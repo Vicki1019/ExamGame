@@ -42,19 +42,7 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         edtMail = (EditText) findViewById(R.id.edtMail);
         edtPwd = (EditText) findViewById(R.id.edtPwd);
 
-        Button btnLogin = (Button) findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new AlertDialog.Builder(MainActivity.this)
-                        //.setTitle("")
-                        .setMessage("請選擇您是練習或是測驗")
-                        .setIcon(R.drawable.ic_launcher_background)
-                        .setPositiveButton("測驗", MainActivity.this)
-                        .setNegativeButton("練習",MainActivity.this)
-                        .show();
-            }
-        });
+
     }
     public void Register(View v){
         String Mail = edtMail.getText().toString();
@@ -96,11 +84,19 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
                             boolean emailVerified = user.isEmailVerified();
                             if (emailVerified) {
                                 Toast.makeText(MainActivity.this, "登入成功" , Toast.LENGTH_SHORT).show();
-                                Intent it = new Intent(MainActivity.this, ChoosePage.class);
-                                startActivity(it);
-                                finish();
                                 Button btnLogin = (Button) findViewById(R.id.btnLogin);
-                                btnLogin.performClick();
+                                btnLogin.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        new AlertDialog.Builder(MainActivity.this)
+                                                //.setTitle("")
+                                                .setMessage("請選擇您是練習或是測驗")
+                                                .setIcon(R.drawable.ic_launcher_background)
+                                                .setPositiveButton("測驗", MainActivity.this)
+                                                .setNegativeButton("練習",MainActivity.this)
+                                                .show();
+                                    }
+                                });
                             }
                             else{
                                 Toast.makeText(MainActivity.this, "您的電子郵件信箱尚未通過認證" , Toast.LENGTH_SHORT).show();
