@@ -27,7 +27,7 @@ public class ChoosePage1 extends AppCompatActivity {
         num.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(ChoosePage1.this, NumGame.class);
+                Intent it = new Intent(ChoosePage1.this, NumTest.class);
                 startActivity(it);
                 finish();
             }
@@ -46,6 +46,15 @@ public class ChoosePage1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(ChoosePage1.this, CheckPage.class);
+                startActivity(it);
+                finish();
+            }
+        });
+        Button prabtn = (Button) findViewById(R.id.prabtn);
+        prabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(ChoosePage1.this, ChoosePage.class);
                 startActivity(it);
                 finish();
             }

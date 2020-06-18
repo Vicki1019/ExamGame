@@ -25,32 +25,29 @@ public class ColorTest2 extends AppCompatActivity implements DialogInterface.OnC
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-        Button ans1 = (Button) findViewById(R.id.ans1);
-        ans1.setOnClickListener(new View.OnClickListener() {
+        Button ans2 = (Button) findViewById(R.id.ans2);
+        ans2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast = Toast.makeText(ColorTest2.this, "好棒，你答對了！",Toast.LENGTH_SHORT);
-                toast.show();
+                Toast.makeText(ColorTest2.this, "真厲害，您答對了！" , Toast.LENGTH_SHORT).show();
                 Intent it = new Intent(ColorTest2.this, ColorTest3.class);
                 startActivity(it);
                 finish();
             }
         });
-        Button ans2 = (Button) findViewById(R.id.ans2);
-        ans2.setOnClickListener(new View.OnClickListener() {
+        Button ans1 = (Button) findViewById(R.id.ans1);
+        ans1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast = Toast.makeText(ColorTest2.this, "差一點就答對了，加油！",Toast.LENGTH_SHORT);
-                toast.show();
+                Toast.makeText(ColorTest2.this, "好像不是這個哦，再試試吧！" , Toast.LENGTH_SHORT).show();
             }
         });
-
         Button back = (Button) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new AlertDialog.Builder(ColorTest2.this)
+                        .setTitle("結束測驗")
                         .setMessage("您確定要結束測驗嗎?")
                         .setIcon(R.drawable.ic_launcher_background)
                         .setPositiveButton("確定", ColorTest2.this)
@@ -62,9 +59,10 @@ public class ColorTest2 extends AppCompatActivity implements DialogInterface.OnC
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == DialogInterface.BUTTON_POSITIVE) {
-            Intent it = new Intent(ColorTest2.this, MainActivity.class);
+            Intent it = new Intent(ColorTest2.this, CheckPage.class);
             startActivity(it);
             finish();
+            Toast.makeText(ColorTest2.this, "已結束測驗" , Toast.LENGTH_SHORT).show();
         }
     }
 }

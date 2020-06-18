@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ColorTest6">
+    tools:context=".ColorTest8">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/photo_purple" />
+        app:srcCompat="@drawable/photo_gray" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:background="@color/cardview_light_background"
-        android:text="紫"
+        android:text="綠"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@color/cardview_light_background"
-        android:text="咖"
+        android:text="灰"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline11"

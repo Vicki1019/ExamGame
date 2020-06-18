@@ -9,7 +9,6 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class ColorTest extends AppCompatActivity implements DialogInterface.OnClickListener{
@@ -26,13 +25,11 @@ public class ColorTest extends AppCompatActivity implements DialogInterface.OnCl
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
         Button ans1 = (Button) findViewById(R.id.ans1);
         ans1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast = Toast.makeText(ColorTest.this, "好棒，你答對了！",Toast.LENGTH_SHORT);
-                toast.show();
+                Toast.makeText(ColorTest.this, "真厲害，您答對了！" , Toast.LENGTH_SHORT).show();
                 Intent it = new Intent(ColorTest.this, ColorTest1.class);
                 startActivity(it);
                 finish();
@@ -42,16 +39,15 @@ public class ColorTest extends AppCompatActivity implements DialogInterface.OnCl
         ans2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast = Toast.makeText(ColorTest.this, "差一點就答對了，加油！",Toast.LENGTH_SHORT);
-                toast.show();
+                Toast.makeText(ColorTest.this, "好像不是這個哦，再試試吧！" , Toast.LENGTH_SHORT).show();
             }
         });
-
         Button back = (Button) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new AlertDialog.Builder(ColorTest.this)
+                        .setTitle("結束測驗")
                         .setMessage("您確定要結束測驗嗎?")
                         .setIcon(R.drawable.ic_launcher_background)
                         .setPositiveButton("確定", ColorTest.this)
@@ -63,9 +59,10 @@ public class ColorTest extends AppCompatActivity implements DialogInterface.OnCl
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == DialogInterface.BUTTON_POSITIVE) {
-            Intent it = new Intent(ColorTest.this, MainActivity.class);
+            Intent it = new Intent(ColorTest.this, CheckPage.class);
             startActivity(it);
             finish();
+            Toast.makeText(ColorTest.this, "已結束測驗" , Toast.LENGTH_SHORT).show();
         }
     }
 }

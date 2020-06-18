@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
 
                             boolean emailVerified = user.isEmailVerified();
                             if (emailVerified) {
-                                Toast.makeText(MainActivity.this, "登入成功" , Toast.LENGTH_SHORT).show();
                                 Button btnLogin = (Button) findViewById(R.id.btnLogin);
+                                Toast.makeText(MainActivity.this, "登入成功" , Toast.LENGTH_SHORT).show();
                                 btnLogin.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {

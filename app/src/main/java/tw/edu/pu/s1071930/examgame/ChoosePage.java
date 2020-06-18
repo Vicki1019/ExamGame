@@ -51,5 +51,14 @@ public class ChoosePage extends AppCompatActivity{
                 finish();
             }
         });
+        Button testbtn = (Button) findViewById(R.id.testbtn);
+        testbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(ChoosePage.this, ChoosePage1.class);
+                startActivity(it);
+                finish();
+            }
+        });
     }
 }

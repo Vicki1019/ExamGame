@@ -26,7 +26,7 @@ public class CheckPage extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(CheckPage.this, ChoosePage.class);
+                Intent it = new Intent(CheckPage.this, MainActivity.class);
                 startActivity(it);
                 finish();
             }
