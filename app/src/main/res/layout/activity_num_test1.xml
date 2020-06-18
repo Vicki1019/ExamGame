@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NumTest">
+    tools:context=".NumTest1">
 
     <ImageView
         android:id="@+id/imageView6"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/pone" />
+        app:srcCompat="@drawable/pthree" />
 
     <Button
         android:id="@+id/back"
@@ -68,7 +68,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintStart_toStartOf="@+id/guideline15"
         app:layout_constraintTop_toTopOf="@+id/guideline16"
-        app:srcCompat="@drawable/one" />
+        app:srcCompat="@drawable/three" />
 
     <Button
         android:id="@+id/ans1"
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@color/design_default_color_background"
-        android:text="一"
+        android:text="三"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:background="@color/design_default_color_background"
-        android:text="五"
+        android:text="九"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"

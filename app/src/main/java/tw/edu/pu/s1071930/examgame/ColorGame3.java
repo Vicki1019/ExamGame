@@ -26,7 +26,7 @@ public class ColorGame3 extends AppCompatActivity {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(ColorGame3.this, CheckPage.class);
+                Intent it = new Intent(ColorGame3.this, ChoosePage.class);
                 startActivity(it);
                 finish();
             }

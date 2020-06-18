@@ -41,15 +41,7 @@ public class ChoosePage1 extends AppCompatActivity {
                 finish();
             }
         });
-        Button checkhbtn = (Button) findViewById(R.id.checkhbtn);
-        checkhbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent it = new Intent(ChoosePage1.this, CheckPage.class);
-                startActivity(it);
-                finish();
-            }
-        });
+
         Button prabtn = (Button) findViewById(R.id.prabtn);
         prabtn.setOnClickListener(new View.OnClickListener() {
             @Override

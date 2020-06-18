@@ -11,12 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class ColorTest7 extends AppCompatActivity implements DialogInterface.OnClickListener{
+public class NumTest3 extends AppCompatActivity implements DialogInterface.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_color_test7);
+        setContentView(R.layout.activity_num_test3);
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -29,8 +29,8 @@ public class ColorTest7 extends AppCompatActivity implements DialogInterface.OnC
         ans1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ColorTest7.this, "真厲害，您答對了！" , Toast.LENGTH_SHORT).show();
-                Intent it = new Intent(ColorTest7.this, ColorTest8.class);
+                Toast.makeText(NumTest3.this, "真厲害，您答對了！" , Toast.LENGTH_SHORT).show();
+                Intent it = new Intent(NumTest3.this, NumTest4.class);
                 startActivity(it);
                 finish();
             }
@@ -39,19 +39,19 @@ public class ColorTest7 extends AppCompatActivity implements DialogInterface.OnC
         ans2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ColorTest7.this, "好像不是這個哦，再試試吧！" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(NumTest3.this, "好像不是這個哦，再試試吧！" , Toast.LENGTH_SHORT).show();
             }
         });
         Button back = (Button) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new AlertDialog.Builder(ColorTest7.this)
+                new AlertDialog.Builder(NumTest3.this)
                         .setTitle("結束測驗")
                         .setMessage("您確定要結束測驗嗎?")
                         .setIcon(R.drawable.ic_launcher_background)
-                        .setPositiveButton("確定", ColorTest7.this)
-                        .setNegativeButton("取消",ColorTest7.this)
+                        .setPositiveButton("確定", NumTest3.this)
+                        .setNegativeButton("取消",NumTest3.this)
                         .show();
             }
         });
@@ -59,10 +59,10 @@ public class ColorTest7 extends AppCompatActivity implements DialogInterface.OnC
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == DialogInterface.BUTTON_POSITIVE) {
-            Intent it = new Intent(ColorTest7.this, ChoosePage1.class);
+            Intent it = new Intent(NumTest3.this, ChoosePage1.class);
             startActivity(it);
             finish();
-            Toast.makeText(ColorTest7.this, "已結束測驗" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(NumTest3.this, "已結束測驗" , Toast.LENGTH_SHORT).show();
         }
     }
 }

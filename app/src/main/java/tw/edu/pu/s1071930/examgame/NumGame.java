@@ -70,7 +70,7 @@ public class NumGame extends AppCompatActivity {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(NumGame.this, CheckPage.class);
+                Intent it = new Intent(NumGame.this, ChoosePage.class);
                 startActivity(it);
                 finish();
             }

@@ -59,7 +59,7 @@ public class ColorTest6 extends AppCompatActivity implements DialogInterface.OnC
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == DialogInterface.BUTTON_POSITIVE) {
-            Intent it = new Intent(ColorTest6.this, CheckPage.class);
+            Intent it = new Intent(ColorTest6.this, ChoosePage1.class);
             startActivity(it);
             finish();
             Toast.makeText(ColorTest6.this, "已結束測驗" , Toast.LENGTH_SHORT).show();
